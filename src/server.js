@@ -22,8 +22,8 @@ wss.on("connection", (ws) => {
       const created = wsCreate(data, ws);
       created && ws.send(JSON.stringify({ op: "create", created }));
     } else if (data.op === "mutate") {
-      const result = wsMutate(data);
-      ws.emit(JSON.stringify(result));
+      const result = wsMutate(data, ws);
+      ws.send(JSON.stringify(result));
     } else if (data.op === "delete") {
       wsDelete(data);
     }
