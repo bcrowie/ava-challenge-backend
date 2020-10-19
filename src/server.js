@@ -4,9 +4,9 @@ const http = require("http");
 const handleRequest = require("./routes/main");
 const { wsCreate, wsDelete, wsMutate } = require("./routes/conversations");
 const port = process.env.PORT || 5000;
+
 const server = http
   .createServer((req, res) => {
-    res.setHeader("Access-Control-Allow-Headers", "https://ava.app.me");
     handleRequest(req, res);
   })
   .listen(port);
