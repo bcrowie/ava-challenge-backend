@@ -5,7 +5,7 @@ module.exports = {
     name: "Brenden Crowie",
   },
   frontend: {
-    url: "https://ava-challenge-frontend.herokuapp.com/",
+    url: "https://ava-challenge-frontend.web.app",
   },
   language: "node.js",
   sources: {
